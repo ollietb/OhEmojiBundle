@@ -1,7 +1,7 @@
 OhEmojiBundle
 =============
 
-Uses [php-emoji](https://github.com/iamcal/php-emoji) to create a Twig extension that converts iPhone emoji icons to html.
+Symfony2 bundle which uses [php-emoji](https://github.com/iamcal/php-emoji) to create a Twig extension that converts iPhone emoji icons to html.
 
 Installation
 ------------
