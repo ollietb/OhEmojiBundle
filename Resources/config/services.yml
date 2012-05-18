@@ -1,0 +1,5 @@
+services:
+    emoji.twig.extension:
+        class: Oh\EmojiBundle\Extension\EmojiExtension
+        tags:
+            -  { name: twig.extension }
