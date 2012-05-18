@@ -38,11 +38,8 @@ Register the bundle in `app/AppKernel.php`:
 
 Add the following line to `app/config/config.yml`:
 
->imports:
->    - { resource: parameters.ini }
->    - { resource: security.yml }
->    - { resource: @OhInstagramBundle/Resources/config/services.yml }
->    - { resource: @OhEmojiBundle/Resources/config/services.yml }
+	imports:
+		- { resource: @OhEmojiBundle/Resources/config/services.yml }
 
 
 finally publish the assets
@@ -51,22 +48,22 @@ finally publish the assets
 
 and include the css in your stylesheets
 
-    <link rel="stylesheet" href="{{asset('css/emoji.css')}}">
+    <link rel="stylesheet" href="{{asset('bundles/ohemoji/css/emoji.css')}}">
 
 Usage (Twig)
 ------------
 
 ### iphone_emoji
 
-Simple function to display wrap spans around your emoji characters.
+Simply use the function to automatically wrap spans around your emoji characters.
 
 	{{ "This text contains some emoji !" | iphone_emoji }}
 
 Would output
 
-	<span class="emoji emoji1f4f1"></span>
+	This text contains some emoji <span class="emoji emoji1f4f1"></span>!
 
-There's also a Google_emoji function
+There's also a google_emoji function, because for some reason they use different standards.
 
 Tests
 -------
