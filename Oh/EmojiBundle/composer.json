@@ -1,0 +1,27 @@
+{
+    "name": "oh/emoji-bundle",
+    "type": "symfony-bundle",
+    "description": "Translates emoji characters to HTML/CSS",
+    "keywords": ["emoji"],
+    "homepage": "https://github.com/ollietb/OhEmojiBundle",
+    "license": "MIT",
+	"version": "1.0.1",
+    "authors": [
+        {
+            "name": "Ollie Harridge",
+            "email": "code@oll.ie"
+        },
+		{
+			"name": "Cal Henderson",
+			"email": "cal@iamcal.com"
+		}
+    ],
+    "require": {
+        "php": ">=5.3.2",
+        "symfony/framework-bundle": "*",
+    },
+    "autoload": {
+        "psr-0": { "Oh\\EmojiBundle": "" }
+    },
+    "target-dir": "Oh/EmojiBundle"
+}
