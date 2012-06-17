@@ -22,8 +22,7 @@
     },
     "autoload": {
         "psr-0": { 
-			"Oh\\EmojiBundle": "",
-			"\\Instaphp": "Oh/EmojiBundle/vendor"
+			"Oh\\EmojiBundle": ""
 		}
     },
     "target-dir": "Oh/EmojiBundle"
