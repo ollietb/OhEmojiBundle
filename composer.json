@@ -3,7 +3,7 @@
     "type": "symfony-bundle",
     "description": "Translates emoji characters to HTML/CSS",
     "keywords": ["emoji"],
-    "homepage": "https://github.com/ollietb/OhEmojiBundle",
+    "homepage": "https://github.com/ollieLtd/OhEmojiBundle",
     "license": "MIT",
 	"version": "1.0.1",
     "authors": [
