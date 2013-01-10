@@ -1,5 +1,8 @@
 services:
+    emoji.converter:
+        class: Oh\EmojiBundle\Service\EmojiConverter
     emoji.twig.extension:
         class: Oh\EmojiBundle\Extension\EmojiExtension
+        arguments: [@emoji.converter]
         tags:
             -  { name: twig.extension }

@@ -2,27 +2,34 @@
 
 namespace Oh\EmojiBundle\Extension;
 
-require_once(__DIR__.'/../vendor/emoji.php');
+use Oh\EmojiBundle\Service\EmojiConverter;
 
-class EmojiExtension extends \Twig_Extension {
+class EmojiExtension extends \Twig_Extension 
+{
+
+    protected $converter;
+
+    public function __construct(EmojiConverter $converter) {
+
+        $this->converter = $converter;
+    }
 
     public function getFilters() {
         return array(
-            'iphone_emoji'   => new \Twig_Filter_Method($this, 'iPhoneToHtml'),
-            'google_emoji'   => new \Twig_Filter_Method($this, 'googleToHtml'),
+            'iphone_emoji' => new \Twig_Filter_Method($this, 'iPhoneToHtml'),
+            'google_emoji' => new \Twig_Filter_Method($this, 'googleToHtml'),
         );
     }
-	
-	public function iPhoneToHtml($sentence) {
-		return emoji_unified_to_html(emoji_softbank_to_unified($sentence));
-	}
-	
-	public function googleToHtml($sentence) {
-		return emoji_unified_to_html(emoji_google_to_unified($sentence));
-	}
-	
-    public function getName()
-    {
+
+    public function iPhoneToHtml($sentence) {
+        return $this->converter->iPhoneToHtml($sentence);
+    }
+
+    public function googleToHtml($sentence) {
+        return $this->converter->googleToHtml($sentence);
+    }
+
+    public function getName() {
         return 'emoji';
     }
 
