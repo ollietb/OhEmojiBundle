@@ -63,12 +63,12 @@ Would output
 
 	This text contains some emoji <span class="emoji emoji1f4f1"></span>!
 
-There's also a google_emoji function, because for some reason they use different standards.
+There's also a `google_emoji` function, because for some reason they use different standards.
 
 Tests
 -------
 
-Not needed - this is just a Symfony2 wrapper for another library which has it's own tests https://github.com/iamcal/php-emoji
+Not needed - this is just a Symfony2 wrapper for another library which has its own tests https://github.com/iamcal/php-emoji
 
 Credits
 -------
